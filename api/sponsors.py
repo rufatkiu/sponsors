@@ -6,7 +6,7 @@ from http.server import BaseHTTPRequestHandler
 def getSponsorNames():
     totalUsers = []
     for i in range(1, 1000):
-        url = f'https://github.com/sponsors/davidjcralph/sponsors_partial?page={i}' # todo: get username from env variable
+        url = f'https://github.com/sponsors/davidcralph/sponsors_partial?page={i}' # todo: get username from env variable
         resp = req.get(url)
         usrCount = 0
         htmlGH = BeautifulSoup(resp.text, 'html.parser')
