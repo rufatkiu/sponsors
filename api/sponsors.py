@@ -28,6 +28,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','application/json')
         self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Cache-Control', 'max-age=0, s-maxage=86400')
         self.end_headers()
         message = getSponsorNames()
         self.wfile.write(str(message).encode())
