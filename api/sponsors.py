@@ -7,7 +7,7 @@ def getSponsorNames():
     totalUsers = []
     for i in range(1, 1000):
         # todo: add opencollective support
-        url = f'https://github.com/sponsors/mue/sponsors_partial?page={i}' # todo: get username from env variable
+        url = f'https://github.com/sponsors/metastem/sponsors_partial?page={i}' # todo: get username from env variable
         resp = req.get(url)
         usrCount = 0
         htmlGH = BeautifulSoup(resp.text, 'html.parser')
